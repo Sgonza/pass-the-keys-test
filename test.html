@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html {
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        background-color: gray;
+      }
+      .content {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        justify-content: space-between;
+      }
+      .content:last-child {
+        align-content: flex-end;
+      }
+      .opt1 {
+        width: 100%;
+        background-color: gray;
+        margin-bottom: 5px;
+      }
+      .opt2 {
+        width: 100%;
+        background-color: gray;
+        margin-bottom: 5px;
+      }
+      .opt3 {
+        width: 100%;
+        background-color: gray;
+        margin-bottom: 5px;
+      }
+      .opt4 {
+        width: 100%;
+        background-color: gray;
+        margin-bottom: 5px;
+      }
+      footer {
+        position: absolute;
+        background-color: gray;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      @media screen and (min-width: 760px)  {
+        .content {
+          flex-direction: column;
+          grid-template-columns: 33% 33% 33%;
+        }
+        .opt1,
+        .opt2,
+        .opt3,
+        .opt4 {
+          margin-bottom: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="head">
+      <h1>Page Title</h1>
+    </header>
+    <div class="content">
+      <div class="opt1">
+        <h2>Option 1</h2>
+        <p>A short description about Option 1.</p>
+        <p> When in desktop mode the hieght of this box will extend to the bottom of Option 4.</p>
+      </div>
+      <div class="opt2">
+        <h2>Option 2</h2>
+        <p>A longer description about option 2 which will cause the background of this box to scale based on the contents of the text.</p>
+        <p>In this case the text is quite long, so the height of the box is also quite large</p>
+        <p>If the text were shorter the height of the containing box would also be shorter.</p>
+      </div>
+      <div class="opt3">
+        <h2>Option 3</h2>
+        <p>A short description about Option 3.</p>
+        <p>Like the Option 1 box, this box will be as long as the combined height of Option 2 and 4 when viewed on a desktop device.</p>
+      </div>
+      <div></div>
+      <div class="opt4">
+        <h2>Option 4</h2>
+        <p>A short description about Option 4.</p>
+      </div>
+      <div></div>
+    </div>
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
+</html>
